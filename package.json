@@ -2,6 +2,8 @@
   "name": "flight-viewport",
   "version": "0.0.2",
   "devDependencies": {
+    "matchdep": "latest",
+    "grunt-bump": "latest",
     "karma": "~0.10.0",
     "karma-jasmine": "~0.1.0",
     "karma-requirejs": "~0.1.0",
