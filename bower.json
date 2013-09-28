@@ -1,5 +1,6 @@
 {
   "name": "flight-viewport",
+  "description": "A flight component for responsive breakpoints",
   "version": "1.0.0",
   "main": "lib/viewport.js",
   "dependencies": {

@@ -1,6 +1,8 @@
 # flight-viewport [![Build Status](https://secure.travis-ci.org/cameronhunter/flight-viewport.png)](http://travis-ci.org/cameronhunter/flight-viewport)
 
-A [Flight](https://github.com/flightjs/flight) component for…
+A [Flight](https://github.com/flightjs/flight) component for responsive
+breakpoints. When the window is resized it triggers a `viewport-update` event
+with the matched breakpoint.
 
 ## Installation
 
@@ -10,7 +12,24 @@ bower install --save flight-viewport
 
 ## Example
 
-…
+```javascript
+define(['flight-viewport'], function(Viewport) {
+
+  Viewport.attachTo(document, {
+    breakpoints: [
+      {'max-width': 865},
+      {'min-width': 866, 'max-width': 1024},
+      {'min-width': 1025, 'max-width': 1600},
+      {'min-width': 1601}
+    ]
+  });
+
+  // Listen for viewport updates
+  $(document).on('viewport-update', function(e, breakpoint) {
+    console.log(e, breakpoint);
+  });
+});
+```
 
 ## Development
 
