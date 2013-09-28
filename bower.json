@@ -5,7 +5,7 @@
     "flight": "~1.1.0",
     "requirejs": "~2.1.5",
     "normalize-css": "~2.1.0",
-    "flight-viewport": "https://github.com/cameronhunter/flight-viewport/archive/v0.0.2.tar.gz"
+    "flight-viewport": "latest"
   },
   "devDependencies": {
     "jasmine-flight": "*",
