@@ -10,7 +10,21 @@
   </head>
   <body>
 
-    <div class="viewport"></div>
+  <h1>flight-viewport <a href="http://travis-ci.org/cameronhunter/flight-viewport"><img src="https://secure.travis-ci.org/cameronhunter/flight-viewport.png" title="Build status"></a></h1>
+
+<pre>
+Viewport.attachTo(document, {
+  breakpoints: [
+    {"max-width": 865},
+    {"min-width": 866, "max-width": 1024},
+    {"min-width": 1025, "max-width": 1600},
+    {"min-width": 1601}
+  ]
+});
+</pre>
+
+    <h2>Current breakpoint:</h2>
+    <pre class="viewport"></pre>
 
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
@@ -18,5 +32,12 @@
     <![endif]-->
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/requirejs/require.js" data-main="js/main.js"></script>
+    <script src="bower_components/highlightjs/highlight.pack.js"></script>
+    <script>
+      $('pre').each(function() {
+        var element = $(this);
+        element.html(hljs.highlight('javascript', element.text()).value);
+      });
+    </script>
   </body>
 </html>
