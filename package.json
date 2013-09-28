@@ -1,6 +1,6 @@
 {
-  "name": "flight-flight-viewport",
-  "version": "0.0.0",
+  "name": "flight-viewport",
+  "version": "0.0.1",
   "devDependencies": {
     "karma": "~0.10.0",
     "karma-jasmine": "~0.1.0",

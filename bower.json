@@ -1,7 +1,7 @@
 {
   "name": "flight-viewport",
   "version": "0.0.1",
-  "main": "lib/flight-viewport.js",
+  "main": "lib/viewport.js",
   "dependencies": {
     "flight": "~1.1.0"
   },
