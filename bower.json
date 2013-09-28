@@ -5,8 +5,7 @@
     "flight": "~1.1.0",
     "requirejs": "~2.1.5",
     "normalize-css": "~2.1.0",
-    "flight-viewport": "latest",
-    "highlightjs": "~7.3.0"
+    "flight-viewport": "latest"
   },
   "devDependencies": {
     "jasmine-flight": "*",
