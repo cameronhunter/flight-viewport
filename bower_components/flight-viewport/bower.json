@@ -1,0 +1,22 @@
+{
+  "name": "flight-viewport",
+  "version": "0.0.2",
+  "main": "lib/viewport.js",
+  "dependencies": {
+    "flight": "~1.1.0"
+  },
+  "devDependencies": {
+    "jasmine-flight": "*",
+    "jasmine-jquery": "*"
+  },
+  "ignore": [
+    ".gitignore",
+    ".gitattributes",
+    ".travis.yml",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md",
+    "test",
+    "package.json",
+    "karma.conf.js"
+  ]
+}
