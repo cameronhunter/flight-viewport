@@ -31,6 +31,10 @@ define(['flight-viewport'], function(Viewport) {
 });
 ```
 
+## Demo
+
+http://cameronhunter.github.io/flight-viewport — resize your browser a couple times!
+
 ## Development
 
 Development of this component requires [Bower](http://bower.io), and preferably
