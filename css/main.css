@@ -1,2 +1,15 @@
 @import "/bower_components/normalize-css/normalize.css";
+@import "/bower_components/highlightjs/styles/github.css";
 
+body {
+  padding: 0 30px;
+}
+
+pre {
+  padding: 10px;
+  background: #eee;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}

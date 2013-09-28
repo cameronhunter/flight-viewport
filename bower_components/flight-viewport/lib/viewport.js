@@ -13,52 +13,52 @@ define(function (require) {
 
     this.defaultAttrs({
       breakpoints: [
-        {'name': 'v1', 'max-width': 865},
-        {'name': 'v2', 'min-width': 866, 'max-width': 1024},
-        {'name': 'v3', 'min-width': 1025, 'max-width': 1600},
-        {'name': 'v4', 'min-width': 1601}
+        {'max-width': 865},
+        {'min-width': 866, 'max-width': 1024},
+        {'min-width': 1025, 'max-width': 1600},
+        {'min-width': 1601}
       ]
     });
 
     this.onResize = function(_, viewport) {
       var breakpoint = this.findBreakpointFor(viewport);
       if (this.hasChanged(breakpoint)) {
+        this.breakpoint = breakpoint;
         this.trigger('viewport-update', breakpoint);
       }
     };
 
     this.hasChanged = function(breakpoint) {
-      var changed = breakpoint[minWidth] !== this.breakpoint[minWidth] ||
-                    breakpoint[maxWidth] !== this.breakpoint[maxWidth];
-      this.breakpoint = breakpoint;
-      return changed;
+      return breakpoint[minWidth] !== this.breakpoint[minWidth] ||
+             breakpoint[maxWidth] !== this.breakpoint[maxWidth];
     };
 
     this.findBreakpointFor = function(viewport) {
       var breakpoints = (this.attr.breakpoints || []);
       var matchingBreakpoints = breakpoints.filter(function(breakpoint) {
-        return viewport.width >= (breakpoint[minWidth] || 0) &&
-               viewport.width <= (breakpoint[maxWidth] || 0)
+        var largerThanMin = breakpoint[minWidth] ? viewport.width >= breakpoint[minWidth] : true;
+        var smallerThanMax = breakpoint[maxWidth] ? viewport.width <= breakpoint[maxWidth] : true;
+        return largerThanMin && smallerThanMax;
       });
 
       return matchingBreakpoints[0];
     };
 
     this.viewport = function() {
-      var $window = $(window);
-      return {width: $window.width(), height: $window.height()};
+      return {width: this.$window.width()};
     };
 
     this.after('initialize', function () {
       this.breakpoint = {};
+      this.$window = $(window);
 
-      this.on('uiWindowResize', this.onResize);
+      this.on('viewport-resize', this.onResize);
 
       this.on(window, 'resize', utils.throttle(function() {
-        this.trigger('uiWindowResize', this.viewport());
+        this.trigger('viewport-resize', this.viewport());
       }.bind(this)));
 
-      this.trigger('uiWindowResize', this.viewport());
+      this.trigger('viewport-resize', this.viewport());
     });
   }
 

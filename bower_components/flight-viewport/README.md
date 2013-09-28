@@ -1,13 +1,11 @@
-# flight-flight-viewport
-
-[![Build Status](https://secure.travis-ci.org/<username>/flight-flight-viewport.png)](http://travis-ci.org/<username>/flight-flight-viewport)
+# flight-viewport [![Build Status](https://secure.travis-ci.org/cameronhunter/flight-viewport.png)](http://travis-ci.org/cameronhunter/flight-viewport)
 
 A [Flight](https://github.com/flightjs/flight) component for…
 
 ## Installation
 
 ```bash
-bower install --save flight-flight-viewport
+bower install --save flight-viewport
 ```
 
 ## Example
