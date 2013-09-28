@@ -12,10 +12,10 @@ define(function (require) {
 
     Viewport.attachTo(document, {
       breakpoints: [
-        {'max-width': 865},
-        {'min-width': 866, 'max-width': 1024},
-        {'min-width': 1025, 'max-width': 1600},
-        {'min-width': 1601}
+        {"name": "S", "max-width": 865},
+        {"name": "M", "min-width": 866, "max-width": 1024},
+        {"name": "L", "min-width": 1025, "max-width": 1600},
+        {"name": "XL", "min-width": 1601}
       ]
     });
   }
