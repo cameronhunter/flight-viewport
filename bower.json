@@ -14,6 +14,7 @@
     ".gitignore",
     ".gitattributes",
     ".travis.yml",
+    ".jshintrc",
     "CONTRIBUTING.md",
     "CHANGELOG.md",
     "test",
