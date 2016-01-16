@@ -1,4 +1,6 @@
-# flight-viewport [![Build Status](https://secure.travis-ci.org/cameronhunter/flight-viewport.png)](http://travis-ci.org/cameronhunter/flight-viewport)
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/) [![Build Status](https://secure.travis-ci.org/cameronhunter/flight-viewport.svg)](http://travis-ci.org/cameronhunter/flight-viewport)
+
+# flight-viewport
 
 A [Flight](https://github.com/flightjs/flight) component for responsive
 breakpoints. When the window is resized it triggers a `viewport-update` event
